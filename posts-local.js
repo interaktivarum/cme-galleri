@@ -11,7 +11,9 @@ const posts =
     }
   ]
 
-// Funktion för att hämta JSON-data
+/**
+ * Funktion för att ladda lokal JSON-data 
+ */
 async function loadJSON() {
   console.log("Laddar lokal JSON-data")
   console.log("Laddad data", posts)

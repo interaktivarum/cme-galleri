@@ -2,7 +2,9 @@
 // Redigera JSON på url:en https://www.npoint.io/docs/f3cd220b748348514780 (ersätt med ditt id)
 const npointId = "f3cd220b748348514780";
 
-// Funktion för att hämta JSON-data från JSON Blob
+/**
+ * Funktion för att hämta JSON-data från nPoint
+ */
 async function loadJSON() {
 
   console.log("Laddar JSON-data från npoint, id:", npointId);
