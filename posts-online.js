@@ -8,8 +8,8 @@ async function loadJSON() {
   console.log("Laddar JSON-data från npoint, id:", npointId);
 
   let posts = [];
-  await fetch('https://api.npoint.io/'+npointId)
-      .then(r => r.json())
-      .then(r => { posts = r; console.log("Laddad data", posts); });
-    return posts;
+  await fetch('https://api.npoint.io/' + npointId)
+    .then(r => r.json())
+    .then(r => { posts = r; console.log("Laddad data", posts); });
+  return posts;
 }

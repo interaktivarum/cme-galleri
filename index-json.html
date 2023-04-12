@@ -1,34 +1,37 @@
 <html>
-    <head>
-        <!-- Ladda lokal CSS. Lägg till egna klasser o.dyl. i denna fil -->
-        <link rel="stylesheet" href="style.css">
-        
-        <!-- Ladda lokal JavaScript. Lägg till ev. egna funktioner i denna fil -->
-        <script src="./index.js"></script>
 
-        <!-- Använd Bootstrap för design, layout, etc. -->
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+<head>
+    <!-- Ladda lokal CSS. Lägg till egna klasser o.dyl. i denna fil -->
+    <link rel="stylesheet" href="style.css">
 
-        <!-- Använd Alpine för att arbeta med inläst JSON-data -->
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Ladda lokal JavaScript. Lägg till ev. egna funktioner i denna fil -->
+    <script src="./index.js"></script>
 
-        <!-- Script för att ladda JSON-data. Avkommentera 1 av följande 2 js-filer -->
-        <!-- <script src="./posts-local.js"></script> -->
-        <script src="./posts-online.js"></script>
-        
-    </head>
-    <body>
-        <h1>Mitt galleri</h1>
-        <div x-data="{posts: []}" x-init="loadJSON().then(r => posts = r)" x-cloak>
-            <!-- Presentera JSON-data -->
-            <pre x-text="print(posts)"></pre>
+    <!-- Använd Bootstrap för design, layout, etc. -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
 
-            <!-- Att göra: -->
-            <!-- Iterera över alla inlägg i JSON-datan. -->
-            <!-- Skriv HTML-kod för hur samtliga inlägg ska visas. -->
-            <!-- Du behöver bara skriva koden för ett (1) inlägg, så appliceras detta automatiskt på samtliga inlägg. -->
-            <!-- Tips! Jobba i små, små steg. Se först till att iterationen fungerar och skriv enbart ut inläggets rubrik. -->
+    <!-- Använd Alpine för att arbeta med inläst JSON-data -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-        </div>
-    </body>
+    <!-- Script för att ladda JSON-data. Avkommentera 1 av följande 2 js-filer -->
+    <!-- <script src="./posts-local.js"></script> -->
+    <script src="./posts-online.js"></script>
+
+</head>
+
+<body>
+    <h1>Mitt galleri</h1>
+    <div x-data="{posts: []}" x-init="loadJSON().then(r => posts = r)" x-cloak>
+        <!-- Presentera JSON-data -->
+        <pre x-text="print(posts)"></pre>
+
+        <!-- Att göra: -->
+        <!-- Iterera över alla inlägg i JSON-datan. -->
+        <!-- Skriv HTML-kod för hur samtliga inlägg ska visas. -->
+        <!-- Du behöver bara skriva koden för ett (1) inlägg, så appliceras detta automatiskt på samtliga inlägg. -->
+        <!-- Tips! Jobba i små, små steg. Se först till att iterationen fungerar och skriv enbart ut inläggets rubrik. -->
+
+    </div>
+</body>
+
 </html>
