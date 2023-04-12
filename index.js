@@ -4,8 +4,8 @@ console.log("JavaScript-filen index.js är laddad");
 // FUNCTIONS
 
 // Skriv ut JSON-objektet som text för att visa innehållet, istället för att visa: [Object object].
-function print(json) {
-    return JSON.stringify(json);
+function printJSON(json) {
+    return JSON.stringify(json, undefined, 2);
 }
 
 // Hämta det numeriska värdet från query-parametern "id" 

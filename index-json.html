@@ -23,7 +23,7 @@
     <h1>Mitt galleri</h1>
     <div x-data="{posts: []}" x-init="loadJSON().then(r => posts = r)" x-cloak>
         <!-- Presentera JSON-data -->
-        <pre x-text="print(posts)"></pre>
+        <pre x-text="printJSON(posts)"></pre>
 
         <!-- Att göra: -->
         <!-- Iterera över alla inlägg i JSON-datan. -->
