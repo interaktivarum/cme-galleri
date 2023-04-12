@@ -1,4 +1,4 @@
-// Skapa JSON-data med alla inlägg (posts) i vårt galleri
+// Skapa JSON-data med alla inlägg (posts) i galleriet
 const posts =
 [
     {
