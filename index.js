@@ -16,7 +16,7 @@ function printJSON(json) {
 */
 function getId() {
     // Hämta parametern id
-    const id = new Proxy(new URLSearchParams(window.location.search), { get: (searchParams, prop) => searchParams.get(prop) })['item'];
+    const id = new Proxy(new URLSearchParams(window.location.search), { get: (searchParams, prop) => searchParams.get(prop) })['id'];
 
     // Gör om textsträngen till en integer (nummeriskt värde)
     return parseInt(id);
