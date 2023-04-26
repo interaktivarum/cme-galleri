@@ -22,21 +22,13 @@
 
 <body>
     <div class="container">
+        <h1>Mitt galleri</h1>
 
-        <a href="index-json.html">Visa alla projekt</a>
         <!-- Ladda JSON-data och spara i variabeln posts. -->
         <!-- Datan laddas från den fil posts-*.js som är avkommenterad ovan. -->
-        <!-- <div x-data="{posts: []}" x-init="loadJSON().then(r => posts = r)" x-cloak> -->
         <div x-data>
 
-            <div class="row row-cols-2">
-                <div>
-                    <img x-bind:src="websiteData.posts[getId()].image" />
-                </div>
-                <div class="col">
-                    <h1 x-text="websiteData.posts[getId()].title"></h1>
-                </div>
-            </div>
+            <pre x-text="printJSON(posts)"></pre>
 
             <!-- Att göra: -->
             <!-- Iterera över alla inlägg i JSON-datan. -->

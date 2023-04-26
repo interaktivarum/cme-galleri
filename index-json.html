@@ -15,40 +15,48 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Script för att ladda JSON-data. Avkommentera 1 av följande 2 js-filer -->
-    <!-- <script src="./posts-local.js"></script> -->
-    <script src="./posts-online.js"></script>
+    <script src="./posts-local.js"></script>
+    <!-- <script src="./posts-online.js"></script> -->
 
 </head>
 
 <body>
     <div class="container">
-        <h1>Mitt galleri</h1>
+
 
         <!-- Ladda JSON-data och spara i variabeln posts. -->
         <!-- Datan laddas från den fil posts-*.js som är avkommenterad ovan. -->
-        <div x-data="{posts: []}" x-init="loadJSON().then(r => posts = r)" x-cloak>
-            <!-- <div x-data> -->
-
-            <div class="row row-cols-3">
-
-                <template x-for="(post, id) in posts">
-
-                    <a x-bind:href="'single-post-json.html?id=' + id">
-                        <div class="col">
-                            <div x-text="post.title"></div>
-                            <img x-bind:src="post.image" />
-                        </div>
-                    </a>
-
-                </template>
-
-            </div>
+        <!-- <div x-data="{posts: []}" x-init="loadJSON().then(r => posts = r)" x-cloak> -->
+        <div x-data>
 
             <!-- Att göra: -->
             <!-- Iterera över alla inlägg i JSON-datan. -->
             <!-- Skriv HTML-kod för hur samtliga inlägg ska visas. -->
             <!-- Du behöver bara skriva koden för ett (1) inlägg, så appliceras detta automatiskt på samtliga inlägg. -->
             <!-- Tips! Jobba i små, små steg. Se först till att iterationen fungerar och skriv enbart ut inläggets rubrik. -->
+
+            <h1 x-text="websiteData.intro_text"></h1>
+
+            <div class="row row-cols-3">
+
+                <template x-for="(post, id) in websiteData.posts">
+
+                    <div>
+                        <div class="col">
+                            <strong x-text="post.title"></strong>
+                            <img x-bind:src="post.image" />
+                        </div>
+                        <p x-text="post.description"></p>
+                        <a x-bind:href="'single-post-json.html?id=' + id">
+                            <button type="button" class="btn btn-primary">Läs mer</button>
+                        </a>
+                    </div>
+
+                </template>
+
+            </div>
+
+
 
         </div>
     </div>
