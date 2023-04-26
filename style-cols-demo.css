@@ -1,0 +1,13 @@
+/* Lägg till dina egna CSS-klasser/selectors här */
+
+body {
+    background-color: #D8FFDC;
+}
+
+.col-content {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.col-content-small {
+    background-color: rgba(0, 0, 255, 0.1);
+}
